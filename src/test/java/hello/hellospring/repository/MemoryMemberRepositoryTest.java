@@ -25,7 +25,8 @@ public class MemoryMemberRepositoryTest {
         member.setName("Spring");
         repository.save( member );
 
-        Member result = repository.findById( member.getId() ).get();
+        //Member result = repository.findById( member.getId() ).get();
+        Member result = repository.findById( member.getId() ).orElse( null );
         assertThat( member ).isEqualTo( result );
     }
 
