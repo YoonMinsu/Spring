@@ -24,6 +24,7 @@ public class MemoryMemberRepositoryTest {
         Member member = new Member();
         member.setName("Spring");
         repository.save( member );
+        
 
         //Member result = repository.findById( member.getId() ).get();
         Member result = repository.findById( member.getId() ).orElse( null );
